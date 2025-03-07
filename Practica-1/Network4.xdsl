@@ -22,20 +22,20 @@
 			<state id="Grande" />
 			<state id="Pequeno" />
 			<parents>Numero_ramas</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.5 0.5 0.5 0.5 0.8 0.2</probabilities>
 		</cpt>
 		<cpt id="Constitucion_planta">
 			<state id="Robustas" />
 			<state id="Fragiles" />
 			<parents>Numero_ramas Diametro_rama_principal</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>1 0 1 0 1 0 0 1 1 0 0 1</probabilities>
 		</cpt>
 		<cpt id="Especie">
 			<state id="Floralis" />
 			<state id="Petalis" />
 			<state id="Ramosis" />
 			<parents>Color_ Numero_ramas Forma_hojas</parents>
-			<probabilities>0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0</probabilities>
+			<probabilities>0 0.8 0.2 0.8 0 0.2 0 0.8 0.2 0.8 0 0.2 0 0.8 0.2 0 0 1 0 0.2 0.8 0.2 0 0.8 0 0.2 0.8 0.2 0 0.8 0 0.2 0.8 0 0 1</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
