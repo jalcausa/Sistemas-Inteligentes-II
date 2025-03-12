@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network1" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Testigo">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Registro_c_maras_seguridad">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Recibos_compras">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Coartada">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Testigo Registro_c_maras_seguridad Recibos_compras</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Habitacion">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Coartada</parents>
+			<probabilities>0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Arma_presente">
+			<state id="Cuchillo" />
+			<state id="Candelabro" />
+			<state id="Pistola" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Habitaci_n_crimen">
+			<state id="Biblioteca" />
+			<state id="Comedor" />
+			<state id="Cocina" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Oportunidad">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Habitacion Arma_presente Habitaci_n_crimen</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Copy_of_Asesino">
+			<state id="Srta_Amapola" />
+			<state id="Srta_Celeste" />
+			<state id="Profesor_Mora" />
+			<state id="Coronel_Rubio" />
+			<probabilities>0.5 0.5 0 0</probabilities>
+		</cpt>
+		<cpt id="Motivo">
+			<state id="Economico" />
+			<state id="Vengaza" />
+			<state id="Celos" />
+			<probabilities>0.5 0.5 0</probabilities>
+		</cpt>
+		<cpt id="Sospecha">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Oportunidad Coartada</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Motivo_2">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Motivo Copy_of_Asesino</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Asesino">
+			<state id="Srta_Amapola" />
+			<state id="Srta_Celeste" />
+			<state id="Profesor_Mora" />
+			<state id="Coronel_Rubio" />
+			<parents>Sospecha Motivo_2</parents>
+			<probabilities>0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0 0.5 0.5 0 0</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Network1" faultnameformat="nodestate">
+			<node id="Asesino">
+				<name>Asesino</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>611 475 705 535</position>
+				<barchart width="128" height="90" />
+			</node>
+			<node id="Motivo">
+				<name>Móvil</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>707 230 788 280</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Coartada">
+				<name>Coartada</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>605 173 687 216</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Arma_presente">
+				<name>Arma presente</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>83 137 163 187</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Habitacion">
+				<name>Presencia habitación crimen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>448 231 533 298</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Oportunidad">
+				<name>Oportunidad</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>340 345 428 404</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Testigo">
+				<name>Testigo</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>450 59 537 112</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Habitaci_n_crimen">
+				<name>Lugar del crimen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>292 159 375 212</position>
+				<barchart width="128" height="72" />
+			</node>
+			<node id="Copy_of_Asesino">
+				<name>Asesinado</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>850 261 926 313</position>
+				<barchart width="128" height="90" />
+			</node>
+			<node id="Registro_c_maras_seguridad">
+				<name>Registro cámaras seguridad</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>602 37 695 95</position>
+				<barchart width="128" height="64" />
+			</node>
+			<node id="Recibos_compras">
+				<name>Recibos compras</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>764 59 859 118</position>
+				<barchart width="128" height="64" />
+			</node>
+			<textbox>
+				<caption>OR</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>676 114 699 132</position>
+			</textbox>
+			<textbox>
+				<caption>OR</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>595 117 618 135</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>315 292 349 310</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>389 299 423 317</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>651 440 685 458</position>
+			</textbox>
+			<node id="Sospecha">
+				<name>Sospecha</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>535 369 634 425</position>
+				<barchart width="128" height="64" />
+			</node>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>778 296 812 314</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="12" />
+				<position>510 326 544 344</position>
+			</textbox>
+			<node id="Motivo_2">
+				<name>Motivo</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>701 338 798 398</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
