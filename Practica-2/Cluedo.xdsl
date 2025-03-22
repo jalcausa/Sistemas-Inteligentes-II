@@ -17,12 +17,13 @@
 			<state id="No" />
 			<probabilities>0.5 0.5</probabilities>
 		</cpt>
-		<cpt id="Coartada">
+		<noisymax id="Coartada">
 			<state id="Si" />
 			<state id="No" />
 			<parents>Testigo Registro_c_maras_seguridad Recibos_compras</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
-		</cpt>
+			<strengths>0 1 0 1 0 1</strengths>
+			<parameters>0.8 0.2 0 1 0.9 0.1 0 1 0.6 0.4 0 1 0.009999999999999898 0.9900000000000001</parameters>
+		</noisymax>
 		<cpt id="Habitacion">
 			<state id="Si" />
 			<state id="No" />
@@ -100,11 +101,11 @@
 				<barchart width="128" height="72" />
 			</node>
 			<node id="Coartada">
-				<name>Coartada</name>
+				<name>Motivos exonerantes</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>605 173 687 216</position>
+				<position>588 168 680 218</position>
 				<barchart width="128" height="64" />
 			</node>
 			<node id="Arma_presente">
@@ -160,7 +161,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>602 37 695 95</position>
+				<position>601 37 694 95</position>
 				<barchart width="128" height="64" />
 			</node>
 			<node id="Recibos_compras">
@@ -168,7 +169,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>764 59 859 118</position>
+				<position>764 58 859 117</position>
 				<barchart width="128" height="64" />
 			</node>
 			<textbox>
@@ -194,7 +195,7 @@
 			<textbox>
 				<caption>AND</caption>
 				<font color="000000" name="Arial" size="12" />
-				<position>651 440 685 458</position>
+				<position>640 438 674 456</position>
 			</textbox>
 			<node id="Sospecha">
 				<name>Sospecha</name>
@@ -212,7 +213,7 @@
 			<textbox>
 				<caption>AND</caption>
 				<font color="000000" name="Arial" size="12" />
-				<position>510 326 544 344</position>
+				<position>530 344 564 362</position>
 			</textbox>
 			<node id="Motivo_2">
 				<name>Motivo</name>
