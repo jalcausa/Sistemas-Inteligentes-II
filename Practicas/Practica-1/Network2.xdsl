@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network2" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Plantas">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Node5">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Plantas</parents>
+			<probabilities>0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Alergia_polen">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Crisis_al_rgica">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Node5 Alergia_polen</parents>
+			<probabilities>0.9 0.1 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="S">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Picaz_n_en_ojos">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Crisis_al_rgica S</parents>
+			<probabilities>0.9 0.1 0.7 0.3 0.7 0.3 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Red 1" faultnameformat="nodestate">
+			<node id="Picaz_n_en_ojos">
+				<name>Picazón en ojos</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>417 392 536 473</position>
+			</node>
+			<node id="Node5">
+				<name>Polen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>208 165 331 239</position>
+			</node>
+			<node id="Alergia_polen">
+				<name>Alergia polen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>391 169 505 245</position>
+			</node>
+			<node id="S">
+				<name>Síndorme ojo seco</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>556 280 670 359</position>
+			</node>
+			<node id="Crisis_al_rgica">
+				<name>Crisis alérgica</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>290 291 411 364</position>
+			</node>
+			<node id="Plantas">
+				<name>Plantas interior</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>180 28 302 99</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

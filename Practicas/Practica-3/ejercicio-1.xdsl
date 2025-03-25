@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network2" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Malware_Whatsapp">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Chats_inaccesibles">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Malware_Whatsapp</parents>
+			<probabilities>0.9 0.09999999999999998 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Autoenv_o_formularios">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Malware_Whatsapp</parents>
+			<probabilities>0.8 0.2 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Sobretensi_n">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Diferencial_apagado">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Sobretensi_n</parents>
+			<probabilities>0.95 0.05000000000000004 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="No_hay_luz">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Diferencial_apagado</parents>
+			<probabilities>0.99 0.01000000000000001 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Falta_papel">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Falta_tinta">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="No_imprime">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Falta_papel Falta_tinta</parents>
+			<probabilities>0.99 0.01000000000000001 0.95 0.05000000000000004 0.92 0.07999999999999996 0.09999999999999998 0.9</probabilities>
+		</cpt>
+		<cpt id="Alergia_polen">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Presencia_polen">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Crisis_al_rgica">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Alergia_polen Presencia_polen</parents>
+			<probabilities>0.85 0.15 0.1 0.9 0.05 0.95 0.02 0.98</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Network2" faultnameformat="nodestate">
+			<node id="Malware_Whatsapp">
+				<name>Malware Whatsapp</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>175 31 292 105</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Chats_inaccesibles">
+				<name>Chats inaccesibles</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>27 133 151 211</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Autoenv_o_formularios">
+				<name>Autoenvío formularios</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>325 132 452 214</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Sobretensi_n">
+				<name>Sobretensión</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>534 108 642 169</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Diferencial_apagado">
+				<name>Diferencial apagado</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>705 106 813 173</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="No_hay_luz">
+				<name>No hay luz</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>867 105 975 171</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Falta_papel">
+				<name>Falta papel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>112 301 208 355</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Falta_tinta">
+				<name>Falta tinta</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>373 309 473 361</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="No_imprime">
+				<name>No imprime</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>243 425 344 481</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Alergia_polen">
+				<name>Alergia polen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>570 270 672 323</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Presencia_polen">
+				<name>Presencia polen</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>809 273 906 328</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Crisis_al_rgica">
+				<name>Crisis alérgica</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>701 426 781 476</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<textbox>
+				<caption>OR</caption>
+				<font color="000000" name="Arial" size="10" />
+				<position>287 377 306 393</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="10" />
+				<position>725 365 752 381</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

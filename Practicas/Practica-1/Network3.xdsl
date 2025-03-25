@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- This network was created in GeNIe Academic, which can be used for educational and research purposes only -->
+<smile version="1.0" id="Network3" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Producto_cosm_tico">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Ir_a_la_playa">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Node2">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Ir_a_la_playa</parents>
+			<probabilities>0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Node4">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Hereditaria">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Ros_cea">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Node4 Hereditaria</parents>
+			<probabilities>0.9 0.1 0.2 0.8 0.1 0.9 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Sesnibilidad_retinol">
+			<state id="Si" />
+			<state id="No" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Quemadura">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Node2</parents>
+			<probabilities>0.7 0.3 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Crisis_por_retinol">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Producto_cosm_tico Sesnibilidad_retinol</parents>
+			<probabilities>0.9 0.1 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="Si" />
+			<state id="No" />
+			<parents>Ros_cea Quemadura Crisis_por_retinol</parents>
+			<probabilities>0.95 0.05000000000000004 0.9 0.09999999999999998 0.9 0.1 0.8 0.2 0.9 0.09999999999999998 0.8 0.2 0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.4.4601.0 ACADEMIC" name="Red 2" faultnameformat="nodestate">
+			<node id="Producto_cosm_tico">
+				<name>Uso producto retinol</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>362 106 475 177</position>
+			</node>
+			<node id="Node2">
+				<name>Exposición al sol</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>146 155 265 220</position>
+			</node>
+			<node id="Ros_cea">
+				<name>Rosácea</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>649 277 752 339</position>
+			</node>
+			<node id="Node4">
+				<name>Familiar con rosácea</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>671 150 783 212</position>
+			</node>
+			<node id="Sesnibilidad_retinol">
+				<name>Sensibilidad retinol</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>489 109 611 183</position>
+			</node>
+			<node id="Quemadura">
+				<name>Quemadura</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>220 272 342 349</position>
+			</node>
+			<node id="Node7">
+				<name>Irritación de la piel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>424 347 562 432</position>
+			</node>
+			<node id="Ir_a_la_playa">
+				<name>Ir a la playa</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>110 37 215 102</position>
+			</node>
+			<node id="Hereditaria">
+				<name>Hereditaria</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>801 152 915 218</position>
+			</node>
+			<node id="Crisis_por_retinol">
+				<name>Crisis por retinol</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>426 221 543 294</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
