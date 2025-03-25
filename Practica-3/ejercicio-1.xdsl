@@ -66,7 +66,7 @@
 			<state id="Si" />
 			<state id="No" />
 			<parents>Alergia_polen Presencia_polen</parents>
-			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+			<probabilities>0.85 0.15 0.1 0.9 0.05 0.95 0.02 0.98</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
@@ -124,7 +124,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>133 306 229 360</position>
+				<position>112 301 208 355</position>
 				<barchart active="true" width="128" height="64" />
 			</node>
 			<node id="Falta_tinta">
@@ -132,7 +132,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>313 307 413 359</position>
+				<position>373 309 473 361</position>
 				<barchart active="true" width="128" height="64" />
 			</node>
 			<node id="No_imprime">
@@ -140,7 +140,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>219 403 320 459</position>
+				<position>243 425 344 481</position>
 				<barchart active="true" width="128" height="64" />
 			</node>
 			<node id="Alergia_polen">
@@ -148,15 +148,15 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>596 277 698 330</position>
-				<barchart active="true" />
+				<position>570 270 672 323</position>
+				<barchart active="true" width="128" height="64" />
 			</node>
 			<node id="Presencia_polen">
 				<name>Presencia polen</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>775 275 872 330</position>
+				<position>809 273 906 328</position>
 				<barchart active="true" width="128" height="64" />
 			</node>
 			<node id="Crisis_al_rgica">
@@ -164,9 +164,19 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>686 391 766 441</position>
+				<position>701 426 781 476</position>
 				<barchart active="true" width="128" height="64" />
 			</node>
+			<textbox>
+				<caption>OR</caption>
+				<font color="000000" name="Arial" size="10" />
+				<position>287 377 306 393</position>
+			</textbox>
+			<textbox>
+				<caption>AND</caption>
+				<font color="000000" name="Arial" size="10" />
+				<position>725 365 752 381</position>
+			</textbox>
 		</genie>
 	</extensions>
 </smile>
