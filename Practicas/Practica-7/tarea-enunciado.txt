@@ -1,0 +1,44 @@
+Valeria es ingeniera de sistemas en la estación espacial internacional Athena-9, y está a cargo del módulo de soporte vital que regula la temperatura, presión y estabilidad de la nave durante las misiones de largo alcance.
+
+Después de años en órbita, Valeria ha desarrollado un método preciso para mantener el sistema bajo control simplemente observando el nivel de vibración del módulo y la presión interna de la cabina para ajustar la intensidad del sistema de enfriamiento, lo que a su vez afecta a la estabilidad estructural de la nave.
+
+Los ingenieros de tierra han recopilado sus reglas y las han modelado usando lógica difusa:
+
+R1. Si la vibración del módulo es media y la presión interna es alta, entonces la intensidad de enfriamiento debe ser baja.
+
+R2. Si la vibración del módulo es media y la presión no es alta, entonces la intensidad de enfriamiento debe ser moderada.
+
+R3. Si la vibración del módulo es baja, entonces la intensidad de enfriamiento debe ser alta.
+
+R4. Si la intensidad de enfriamiento es baja, la estabilidad estructural es media.
+
+R5. Si la intensidad de enfriamiento es moderada, la estabilidad estructural es alta.
+
+R6. Si la intensidad de enfriamiento es alta, la estabilidad estructural es alta.
+
+Tras recopilar datos durante varias misiones, se han definido los siguientes conjuntos difusos:
+
+📡 Nivel de vibración del módulo (0 a 10 unidades)
+Bajo: (0/0, 1/2, 1/4, 0/6)
+
+Medio: (0/4, 1/6, 1/8, 0/10)
+
+🌡️ Presión interna (en atm, 0 a 100)
+Alta: (0/40, 1/60, 0/80)
+
+❄️ Intensidad del sistema de enfriamiento (0 a 100 unidades)
+Baja: (0/10, 1/30, 0/50)
+
+Moderada: (0/30, 1/50, 0/70)
+
+Alta: (0/60, 1/80, 0/100)
+
+🛡️ Estabilidad estructural (escala de 0 a 5)
+Media: (0/1, 1/3, 0/5)
+
+Alta: (0/3, 1/4)
+
+❓ Pregunta:
+Durante una misión de reentrada, se detecta que la vibración del módulo es 6 unidades y la presión interna es 50 atm.
+¿Qué valor nítido debe asignarse a la estabilidad estructural de la nave usando la técnica de la media de los valores máximos (Mean of Maxima, MOM)?
+
