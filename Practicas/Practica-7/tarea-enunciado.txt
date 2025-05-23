@@ -1,44 +1,63 @@
-Valeria es ingeniera de sistemas en la estación espacial internacional Athena-9, y está a cargo del módulo de soporte vital que regula la temperatura, presión y estabilidad de la nave durante las misiones de largo alcance.
+🚀 Problema: Control difuso del sistema de soporte vital en Athena-9
+Valeria es ingeniera de sistemas en la estación espacial internacional Athena-9. Lleva más de una década supervisando el módulo de soporte vital, responsable de garantizar las condiciones ideales para la tripulación durante las misiones espaciales de larga duración.
 
-Después de años en órbita, Valeria ha desarrollado un método preciso para mantener el sistema bajo control simplemente observando el nivel de vibración del módulo y la presión interna de la cabina para ajustar la intensidad del sistema de enfriamiento, lo que a su vez afecta a la estabilidad estructural de la nave.
+Gracias a su experiencia, Valeria ha desarrollado un método efectivo para mantener el sistema bajo control observando cuatro variables principales:
 
-Los ingenieros de tierra han recopilado sus reglas y las han modelado usando lógica difusa:
+Nivel de vibración del módulo
 
-R1. Si la vibración del módulo es media y la presión interna es alta, entonces la intensidad de enfriamiento debe ser baja.
+Presión interna de la cabina
 
-R2. Si la vibración del módulo es media y la presión no es alta, entonces la intensidad de enfriamiento debe ser moderada.
+Intensidad del sistema de enfriamiento
 
-R3. Si la vibración del módulo es baja, entonces la intensidad de enfriamiento debe ser alta.
+Estabilidad estructural de la nave
 
-R4. Si la intensidad de enfriamiento es baja, la estabilidad estructural es media.
+A lo largo del tiempo, los ingenieros de tierra han formalizado su conocimiento en forma de reglas de inferencia basadas en lógica difusa:
 
-R5. Si la intensidad de enfriamiento es moderada, la estabilidad estructural es alta.
+🔧 Reglas (con encadenamiento y antecedentes compuestos):
+R1. Si la vibración es media y la presión es muy alta, entonces la intensidad de enfriamiento debe ser baja.
 
-R6. Si la intensidad de enfriamiento es alta, la estabilidad estructural es alta.
+R2. Si la vibración es algo media y la presión no es alta, entonces la intensidad de enfriamiento debe ser moderada.
 
-Tras recopilar datos durante varias misiones, se han definido los siguientes conjuntos difusos:
+R3. Si la vibración es baja, entonces la intensidad de enfriamiento debe ser alta.
 
-📡 Nivel de vibración del módulo (0 a 10 unidades)
-Bajo: (0/0, 1/2, 1/4, 0/6)
+R4. Si la intensidad de enfriamiento es baja, entonces la estabilidad estructural es media.
 
-Medio: (0/4, 1/6, 1/8, 0/10)
+R5. Si la intensidad de enfriamiento es alta, entonces la estabilidad estructural es alta.
 
-🌡️ Presión interna (en atm, 0 a 100)
+(Observa que hay encadenamiento: R1–R3 afectan a intensidad, que se usa como antecedente en R4 y R5.)
+
+📊 Variables lingüísticas y conjuntos difusos:
+📡 Vibración del módulo (0 a 10 unidades)
+Baja: (0/0, 1/2, 1/4, 0/6)
+
+Media: (0/4, 1/6, 1/8, 0/10)
+
+Algo media (modificador “algo”): (0/4, 0.5/5, 1/6, 0.5/7, 0/8)
+
+🌡️ Presión interna (atm, 0 a 100)
 Alta: (0/40, 1/60, 0/80)
 
-❄️ Intensidad del sistema de enfriamiento (0 a 100 unidades)
+Muy alta (modificador “muy”): (0/50, 1/70, 0/90)
+
+No alta (complemento de alta): (1/0, 0.5/60, 0/80)
+
+❄️ Intensidad de enfriamiento (0 a 100)
 Baja: (0/10, 1/30, 0/50)
 
 Moderada: (0/30, 1/50, 0/70)
 
 Alta: (0/60, 1/80, 0/100)
 
-🛡️ Estabilidad estructural (escala de 0 a 5)
+🛡️ Estabilidad estructural (0 a 5)
 Media: (0/1, 1/3, 0/5)
 
 Alta: (0/3, 1/4)
 
-❓ Pregunta:
-Durante una misión de reentrada, se detecta que la vibración del módulo es 6 unidades y la presión interna es 50 atm.
-¿Qué valor nítido debe asignarse a la estabilidad estructural de la nave usando la técnica de la media de los valores máximos (Mean of Maxima, MOM)?
+❓Pregunta:
+Durante una misión de reentrada, se detecta que:
 
+La vibración del módulo es de 6 unidades
+
+La presión interna es de 50 atm
+
+¿Qué valor nítido debe asignarse a la estabilidad estructural de la nave usando la técnica de la media de los valores máximos (Mean of Maxima, MOM)?
